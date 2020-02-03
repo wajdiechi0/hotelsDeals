@@ -44,7 +44,7 @@ const OneDeal: FunctionComponent<Props> = props => {
         </View>
       </View>
 
-      <View style={{paddingLeft: 20, paddingTop: 5}}>
+      <View style={styles.infosCont}>
         <Text style={styles.titleText}>{props.dealDetails.title}</Text>
         <Text style={styles.subtitleText}>{props.dealDetails.subtitle}</Text>
         <View style={styles.priceCont}>
@@ -115,6 +115,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     paddingRight: 5,
   },
+  infosCont: {paddingLeft: 20, paddingTop: 5},
   vanafText: {fontWeight: '400', fontSize: 10},
   value: {fontWeight: 'bold', fontSize: 12},
   populaireText: {textAlign: 'center', color: 'white'},

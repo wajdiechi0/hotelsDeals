@@ -52,9 +52,9 @@ class Details extends React.Component<Props, State> {
             <Text style={styles.priceText}> per person </Text>
           </View>
         </View>
-        <View style={{flex: 1, marginTop: 20}}>
+        <View style={styles.scrollableTab}>
           <ScrollableTabView
-            tabBarUnderlineStyle={{backgroundColor: '#fb9b34'}}
+            tabBarUnderlineStyle={styles.tabBarUnderlineStyle}
             tabBarActiveTextColor={'#000'}>
             <Page tabLabel="Beschrijving" tabN={0} deal={deal} />
             <Page
@@ -101,6 +101,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: 18,
   },
+  scrollableTab: {flex: 1, marginTop: 20},
+  tabBarUnderlineStyle: {backgroundColor: '#fb9b34'},
   bookNowCont: {
     position: 'absolute',
     bottom: 0,

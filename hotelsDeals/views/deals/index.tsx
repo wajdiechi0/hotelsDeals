@@ -51,7 +51,7 @@ class Deals extends React.Component<Props, State> {
       <SafeAreaView>
         <ScrollView>
           <View style={styles.header}>
-            <Text style={{alignSelf: 'center'}}>Deals</Text>
+            <Text style={styles.dealsTitle}>Deals</Text>
             <View style={styles.headerButtons}>
               <TouchableOpacity>
                 <Image source={scan} style={styles.scanStyle} />
@@ -61,7 +61,7 @@ class Deals extends React.Component<Props, State> {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={{padding: 10}}>
+          <View style={styles.dealsCont}>
             <Text style={styles.topDealsText}>Top Zomer deals</Text>
             <ScrollView horizontal={true}>
               {this.state.deals.map(
@@ -130,11 +130,13 @@ const styles = StyleSheet.create({
     top: 20,
     flexDirection: 'row',
   },
+  dealsTitle: {alignSelf: 'center'},
   scanStyle: {width: 20, height: 20, marginRight: 10},
   topDealsText: {fontWeight: 'bold', fontSize: 20, marginBottom: 10},
   alleDealsText: {fontWeight: 'bold', fontSize: 20, marginVertical: 10},
   line: {backgroundColor: '#d9d9d9', width: '100%', height: 1},
   userStyle: {width: 20, height: 20},
+  dealsCont: {padding: 10},
 });
 
 export default Deals;

@@ -19,7 +19,7 @@ const Description: FunctionComponent<Props> = props => {
     <ScrollView style={styles.scrollView}>
       <Text style={styles.title}>Dit arragement bevat</Text>
       {props.deal.contents.map((item: string) => (
-        <View style={{flexDirection: 'row'}} key={item}>
+        <View style={styles.descriptionCont} key={item}>
           <Image source={checkmark} style={styles.checkmarkStyle} />
           <Text>{item}</Text>
         </View>
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
       },
     ),
   },
+  descriptionCont: {flexDirection: 'row'},
   checkmarkStyle: {
     height: 10,
     width: 10,
